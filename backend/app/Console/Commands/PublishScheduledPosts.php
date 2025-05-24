@@ -8,7 +8,7 @@ use Carbon\Carbon;
 
 class PublishScheduledPosts extends Command
 {
-    // اسم الأمر اللي هيظهر في التيرمنال
+   
     protected $signature = 'publish:scheduled-posts';
 
     protected $description = 'Publish posts that are scheduled for now or earlier';

@@ -9,7 +9,7 @@ api.interceptors.request.use(config => {
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
     }
-    // اذا الميديا نوعها FormData
+
     if (config.data instanceof FormData) {
         config.headers['Content-Type'] = 'multipart/form-data';
     }

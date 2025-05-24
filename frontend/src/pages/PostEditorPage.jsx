@@ -12,7 +12,7 @@ export default function PostEditorPage() {
     title: "",
     content: "",
     image: null,
-    imagePreview: null, // هنا بنخزن preview للصورة المعروضة
+    imagePreview: null,
     scheduled_time: "",
     status: "draft",
     platforms: [],
@@ -30,7 +30,7 @@ export default function PostEditorPage() {
           title: data.title,
           content: data.content,
           image: null,
-          imagePreview: data.image_url || null, // لو عندنا URL صورة نعرضها
+          imagePreview: data.image_url || null, 
           scheduled_time: data.scheduled_time || "",
           status: data.status || "draft",
           platforms: data.platforms.map((p) => p.id),
@@ -47,7 +47,7 @@ export default function PostEditorPage() {
         setForm((f) => ({
           ...f,
           image: file,
-          imagePreview: URL.createObjectURL(file), // إنشاء رابط مؤقت للعرض
+          imagePreview: URL.createObjectURL(file), 
         }));
       }
     } else if (name === "status") {

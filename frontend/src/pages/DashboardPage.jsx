@@ -39,11 +39,10 @@ export default function DashboardPage() {
         content: editForm.content,
         status: editForm.status,
       });
-      // تحديث البوست في القائمة محلياً
       setPosts(posts.map(post => post.id === postId ? res.data : post));
       setEditingPostId(null);
     } catch (err) {
-      setError(err.response?.data?.message || "حدث خطأ أثناء الحفظ");
+      setError(err.response?.data?.message || "Error");
     }
     setLoading(false);
   }
@@ -338,7 +337,7 @@ export default function DashboardPage() {
                         </span>
                       </div>
 
-                      {/* زر التعديل */}
+                
                       <button
                         onClick={() => startEditing(post)}
                         style={{
